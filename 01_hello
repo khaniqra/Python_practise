@@ -1,0 +1,17 @@
+''' multiline comment'''
+# single line comment
+'''pip intsall module - to install module from internet'''
+# import module - to import built in module
+import os
+print("hello world\n")
+# use ''' ''' to write multiple statement in print othersie in "" it will give error
+print("Pr1 Poem")
+print('''Twinkle, twinkle, little star,
+How I wonder what you are!
+Up above the world so high,
+Like a diamond in the sky. \n''')
+print("Pr2 Table of 5")
+for i in range(1,10):
+    print(5*i)
+print("\nPr3 list of files in directory")
+print(os.listdir())# function in os module used to print files in
