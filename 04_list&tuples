@@ -1,0 +1,30 @@
+import math
+#program to store names in list
+
+a=int(input("Enter 1st marks: "))
+b=int(input("Enter 2st marks: "))
+c=int(input("Enter 3st marks: "))
+l1=[a,b,c]
+
+## or 
+# l1=[0,0,0,0]
+# l1[0]=input("Enter 1st name: ")
+# l1[1]=input("Enter 2st name: ")
+print(l1)
+
+#sorting of list
+l1.sort() #prnts the list no need to call print function
+#print(l1.sort()) it retuens the value like none
+
+#Tuple can't be modified
+t=(23,88,67)
+# t[0]=33 #error 
+print(t)
+#t.sort() tuple has nop attribute as sort
+print(t.count(11)) #count() doen't print on own
+
+#sum of list
+print(sum(l1))
+
+#avg of list
+print(sum(l1)/len(l1))
