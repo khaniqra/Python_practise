@@ -1,0 +1,29 @@
+#print value entered by user followed by your msg
+
+a=input("Enter the value: ")
+print("Hello "+a +"!!!")
+
+# #print a template
+print("\n")
+a1=input("Enter name: ")
+b1=input("Enter date: ")
+
+# # print("Dear "+a1 +","+\n + "You are selected" +\n+ b1) error video reference
+
+letter=''' Hello <name>,
+You are selected!!!
+<date>'''
+letter = letter.replace("<name>",a1)
+letter = letter.replace("<date>",b1)
+print(letter)
+
+#program to detect double spaces in string
+print("\n")
+a2=input("Enter a statement: ")
+print(a2.find("  "))# returns index of given word in the given string if not found then returns -1
+
+#replaces double spaces by single spaces
+
+a2=a2.replace("  "," ") #replaces operand 1 by 2
+print(a2)
+#\n newline; \t tab
