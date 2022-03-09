@@ -1,0 +1,32 @@
+import math
+
+# program to add two numbers
+a_0=input("Enter 1st no ")
+a=int(a_0)
+b=int(input("Enter 2nd no "))
+print(a+b)
+
+#to find remainder when divided by a number
+
+print(a%b)
+
+#check the data type of variable
+
+print(type(a_0)) # type function is used to show the data type of a variable
+print(type(a))
+
+#use of comparision operators
+
+print(a>b)#boolean output i.e TRUE or FALSE
+print(a if a > b else b) #ternary operator a>b?a:b
+
+#print average of two numbers
+
+I=[a,b]
+avg=sum(I)/len(I) #functions applicable to list not to direct var
+print(avg)
+# print(mean(I)) error
+
+#to find square anumber
+
+print(math.pow(a,2))
