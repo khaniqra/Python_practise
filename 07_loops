@@ -1,0 +1,67 @@
+import math
+# loops
+
+# program to write multiplication of a given no using loop
+
+#for loop
+n=int(input("Enter a number: "))
+# for i in range(1,11): #range 1 to 11 excluding 11
+#   print(n*i)
+#range is considered till 10 only and we need to assign start or else it is started from 0
+#no need to initialize i=0
+
+#while loop
+i=1
+while i<=10:
+  print(n*i)
+  i=i+1
+#i++ is invalid syntax
+
+#program to greet all people with name starting with s in given list
+
+  l=["harry","sachin","sonal","rahul"]
+
+for name in l:
+  if name.startswith("s"):
+    print("Hello "+ name)
+#use func as startswith , endswith
+
+#program to check if the guiven no is prime or not
+
+#a=int(math.sqrt(n))
+prime=False #imp if not initialized we get error in else
+for i in range(2,n):
+  if(n%i ==0):
+    prime=True
+    break
+#break imp otherwise it checks for all no and it it is not divisble by last no then it is set as prime(eg:10/9!=0 then 10 is considered as prime)
+
+if prime:
+  print("\nis not prime\n")# n + "is not prime" giving error bcuz n is not string but int + can concatenate str only needs to be type casted to str()
+else:
+  print("\nis prime\n")
+
+#program to find sum of first n no using while loop
+
+i=0
+sum=0
+while i<=n:
+  sum=sum+i
+  i=i+1
+
+print("Sum is: " + str(sum))
+
+#factorial of given no using for loop
+
+fact=1
+for i in range(1,n+1):
+  fact=fact*i
+
+print("Factorial is: "+str(fact))
+print(f"The factorial of {n} is {fact}")
+
+#multiplicatiopn of given no in reverse order
+#for loop
+
+for i in range(10,0,-1):#range 10 to 0 excluding 0
+  print(n*i)
