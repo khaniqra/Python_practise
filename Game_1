@@ -1,0 +1,46 @@
+import random
+
+def game(comp,you):
+  # if you != ('s'or 'g' or 'w'):
+  #   print("Invalid choice")
+  if comp == you:
+    return None
+  elif comp == 's':
+    if you == 'w':
+      return False
+    elif you == 'g':
+      return True
+  elif comp == 'w':
+    if you == 'g':
+      return False
+    elif you == 's':
+      return True
+  elif comp == 'g':
+    if you == 's':
+      return False
+    elif you == 'w':
+      return True
+
+n= input("Do you want to play(1)? : ")
+if n=="1":
+  print("Comp turn: Snake(s) water(w) gun(g)")
+  no = random.randint(1,3)
+  if no == 1:
+    comp ='s'
+  elif no == 2:
+    comp ='w'
+  elif no == 3:
+    comp ='g'
+  you=input("Your turn: Snake(s) water(w) gun(g) : ")
+  
+  a=game(comp,you)
+  print(f"Computer's choice {comp}")
+  print(f"Your choice {you}")
+  if a==None:
+    print("The game is a tie!")
+  elif a:
+    print("You Win!!!")
+  else:
+    print("You Lose")
+else:
+  print("Thank you for playing!!")
