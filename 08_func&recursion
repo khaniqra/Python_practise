@@ -1,0 +1,57 @@
+#Function & Recursion
+
+# func to find the greatest no
+def greatest(n1,n2,n3,n4):
+  max = (a) if(a>b and a>c and a>d) else((b) if(b>c and b>d) else((c) if(c>d) else(d)))
+  return max
+
+a=int(input("Enter no1: "))
+b=int(input("Enter no2: "))
+c=int(input("Enter no3: "))
+d=int(input("Enter no4: "))
+result=greatest(a,b,c,d)
+
+print("The greatest no is: " + str(result))
+
+#program to convert celsius to fahrenheit
+
+def convert(n):
+  f= (n * 9/5) + 32
+  return f
+
+temp=int(input("Enter the temp in celsius: "))
+print(f"Temp in fahrenheit is {convert(temp)}")
+
+#recursive program to calculate sum of n natural no
+#error: if else required to stop the iteration
+def sum(n):
+  if n == 1:
+    return 1
+  else:
+    result = sum(n-1)+n
+  return result
+  
+n=int(input("enter the no: "))
+result=sum(n)
+print(f"Sum is: {result}")
+
+#func to convert inches to cms
+
+def cm(n):
+  return n*2.54
+  
+inch=int(input("Enter the inches: "))
+print("cm conversion is: "+ str(cm(inch)))
+
+remove the word from the string & strip it
+
+this = "        This is good       "
+print(this)
+print(this.strip())
+
+def remove_strip(string,word):
+  newstr= string.replace(word,"")
+  return newstr.strip()
+
+n=remove_strip(this,"This")
+print(n)
