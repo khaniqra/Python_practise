@@ -1,0 +1,96 @@
+#dictionary & set
+# list=[,,]
+# tuples =(,,)
+# dict={key:value}
+# set={,,}
+#Creating a dictionary
+
+dict ={
+  "ABC":"abc",
+  "DEF":"def",
+  "HIJ":"hij"
+  # "ABCD":{'abc':"bcd"} syntax error
+}
+
+#to find a word in dict
+
+print("Options are : ",dict.keys())
+a = input("enter the word to search: ")
+# print("The value of ur key is: ", dict[a]) gives error if the key is not present
+print("The value of ur key is: ", dict.get(a))
+# .get returns none for unknown key
+print(dict)
+print(dict['ABC'])
+
+new_dict={
+  "pqr":"xyz"
+}
+dict.update(new_dict)
+print(dict)
+
+#program to ake input from user and print the unique numbers
+
+#input is taken as string
+b=input("enter the no 1: ")
+b1=input("enter the no 2: ")
+b2=input("enter the no 3: ")
+b3=input("enter the no 4: ")
+b4=int(input("enter the no: "))
+b5=float(input("enter the no: "))
+
+a={b,b1,b2,b3,b4,b5}
+
+print(a)
+#set with int 2 and str 2 takes both as both are of diff data type but with float and int only one is considered
+
+#create empty set
+s=set()
+print(s)#prints set()
+print(len(s))# size 0
+print(type(s)) # class set
+a={}
+print(type(a)) # class dict
+
+s.add(20)
+print(s)
+s.add(20.0)
+print(s)#only one 20 is printed as 20.0 & 20 are equal
+s.add("20")
+print(s)
+s.add(20.5)
+print(s)
+
+#create an empty dict and enter key and values from User
+
+favlang ={}
+
+favlang['sonal']=input("Enter ur fav lang Sonal: ")
+favlang['harry']=input("Enter ur fav lang Harsh: ")
+favlang['sonali']=input("Enter ur fav lang Sonali: ")
+
+print(favlang)
+
+#if two keys have smae name then only onepair is considered and the key value is the latest
+
+
+favlang['sonal']=input("Enter ur fav lang Sonal: ")
+favlang['harry']=input("Enter ur fav lang Harsh: ")
+favlang['sonal']=input("Enter ur fav lang Sonal: ")
+
+print(favlang)
+
+#if two key have same value then each pair is printed individaully there's no overlapping
+
+
+favlang['sonal']=input("Enter ur fav lang Sonal: ")
+favlang['harry']=input("Enter ur fav lang Harsh: ")
+favlang['sonali']=input("Enter ur fav lang Sonali: ")
+
+print(favlang)
+
+#chnage value in list contained in a  set
+
+# s={8,7,12,"Harry",[1,2]} error unhashable list not allowed in set
+#1. we can't  store set in list as set don;t have repeated values but list have
+#2. we can't access that list by any means
+#3. if there was a tuple then we won't be able to change tuple at all but it wud be accepted in the set
