@@ -1,0 +1,90 @@
+#Conditional Statements
+
+#program to find the greatest of four no entered by user
+
+# a=int(input("Enter no 1: "))
+# b=int(input("Enter no 2: "))
+# c=int(input("Enter no 3: "))
+# d=int(input("Enter no 4: "))
+
+# if a>b and a>c and a>d:
+#   print(a)
+# elif b>c and b>d:
+#   print(b)
+# elif c>d:
+#   print(c)
+# else:
+#   print(d)
+
+#ternary operator [on_true] if [expression] else [on_false] 
+
+# max = (a) if(a>b and a>c and a>d) else((b) if(b>c and b>d) else((c) if(c>d) else(d)))
+
+# print(max)
+
+#program to determine if the student is passed of fail (40% total & 33% in each sub)
+
+# math=int(input("Enter marks: "))
+# chem=int(input("Enter marks: "))
+# phy=int(input("Enter marks: "))
+
+# if(math+chem+phy<40):
+#   print("Fail")
+# else:
+#   if(math<33 or chem<33 or phy<33):
+#    print("fail")
+#   else:
+#     print("pass")
+
+#program to detect spam
+
+str=input("Enter the string: ")
+
+#spam = False #can define directly
+if('subscribe' in str):
+  spam = True
+elif('money' in str):
+  spam = True
+elif('buy now' in str):#works only if the exact string is present
+  spam = True
+else:
+  spam=False
+
+if(spam):
+  print("Spam comment")
+else:
+  print("No spam")
+
+#to try with string compare function
+
+#program to find if given str contains less than 10 char
+
+str1=input("Enter the username: ")
+
+if(len(str1)<10):
+  print("Invalid")
+else:
+  print("Valid")
+
+#to check if given name is present in list or not
+
+names=["harry","rohan","rahul"]
+
+name=input("Enter name to check: ")
+
+if name in names:
+  print("Present")
+else:
+  print("Not available")
+
+#check if given post is talking about given topic or not
+
+post=input("Enter the post: ")
+topic=input("Enter the topic: ")
+
+if topic in post:
+  print("the post is taling about "+topic)
+else:
+  print("The post has different topic")
+
+## harry and harry are not same
